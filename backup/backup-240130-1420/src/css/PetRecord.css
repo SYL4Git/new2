@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* PetRecord */
+
+.PetRecord{
+    margin: 10px 0;
+}
+.PetRecord div{
+    display: flex;
+    margin-bottom: 10px;
+}
+.PetRecord div>p{
+    margin-right: 10px;
+}
+.PetRecord>div>div{
+    display: flex;
+}
+.PetRecord>div>div p{
+    margin-right: 10px;
+}
+.chck1, .chck2, .chck3{
+    margin-right: 6px;
+}
+.misc input{
+    width: 300px;
+    height: 150px;
+}

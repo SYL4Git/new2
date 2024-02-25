@@ -1,0 +1,61 @@
+@charset 'utf-8';
+/* PetDetail */
+/* 이름 요소를 <div> 로 감싸주기 */
+
+.PetDetailIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.PetDetailIn div{
+    /* width: 100px; */
+    margin-bottom: 10px;
+}
+.PetDetailIn div:last-child{
+    margin-bottom: 0;
+}
+.name p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.PetDetailIn .type_gender{
+    display: flex;
+    /* width: 150px; */
+}
+.type_gender p:first-child::after{
+    content: '|';
+    padding: 0 10px;
+    color: #ebebeb;
+}
+.age{
+    display: flex;
+    /* width: 180px; */
+}
+.age p{
+    margin-right: 4px;
+}
+.age p:nth-child(2){
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.weight p{
+    font-weight: 600;
+}
+.illness p span{
+    font-weight: 600;
+    margin-right: 10px;
+}
+.PetDetail .detailBtns {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+.PetDetail .detailBtns div{
+    padding: 5px 5px;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 0 5px;
+}

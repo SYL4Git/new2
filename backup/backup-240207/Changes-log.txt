@@ -1,0 +1,254 @@
+240206
+
+Radio.js:
+
+line8
+defaultChecked=삭제
+
+
+
+PetRecord.js:
+
+line2
+=>import {AnimalList} 
+
+line3
+=>import moment
+
+line 9~
+=>const PetRecord({calValue, pet_id, symptom_id})
+
+line25
+const handleMiscChange=(e)=>{setMisc(e.target.value)}
+
+line 29
+  const handleSymptomAdd = () => {
+    const newSymptom={
+      pet_id,
+      symptom_date: moment(calValue).format('YYYY/MM/DD'),
+      cough,
+      hunger,
+      urine,
+      excrement,
+      temperature,
+      active,
+      misc
+    }
+    onSymptomAdd(pet_id, newSymptom);
+    console.log(newSymptom)
+    console.log(onSymptomAdd);
+    console.log(
+      cough,
+      runningNose,
+      hunger,
+      urine,
+      excrement,
+      temperature,
+      active,
+      misc
+    );
+    window.confirm("증상들을 올바르게 입력하셨습니까?");
+  };
+
+line 176
+onChange={handleMiscChange}
+
+line 182
+handleSymptomAdd(symptom_id)
+
+-----------------------------
+
+
+PetDetail.js
+
+line 2
+delete import AnimalList
+
+line4
+import moment
+
+line98
+delete symptom_date={symptom_date}
+
+line58~83
+PetDetailIn 전반적인 레이아웃 수정 (css 수정 목적)
+----------------
+
+App.js
+
+line 139
+    case "SYMPTOMADD": {
+      const { data } = action;
+      newState = state.map((item) => {
+        if (item.pet_id === data.pet_id) {
+          const petSymptoms = Array.isArray(item.pet_symptoms)
+            ? item.pet_symptoms
+            : [];
+          return {
+            ...item,
+            pet_symptoms: [
+              ...petSymptoms,
+              {
+                symptom_id: data.symptom_id,
+                symptom_date: data.symptom_date,
+                cough: data.cough,
+                runningNose: data.runningNose,
+                hunger: data.hunger,
+                urine: data.urine,
+                excrement: data.excrement,
+                temperature: data.temperature,
+                active: data.active,
+                misc: data.misc,
+              },
+            ],
+          };
+        }
+        return item;
+      });
+      break;
+    }
+
+
+line 290
+  const onSymptomAdd = (
+    pet_id,
+    date,
+    cough,
+    runningNose,
+    hunger,
+    urine,
+    excrement,
+    temperature,
+    active,
+    misc
+  ) => {
+    dispatch({
+      type: "SYMPTOMADD",
+      data: {
+        pet_id,
+        symptom_id: symptomId.current,
+        symptom_date: new Date(date),
+        cough,
+        runningNose,
+        hunger,
+        urine,
+        excrement,
+        temperature,
+        active,
+        misc,
+      },
+    });
+    symptomId.current += 1;
+  };
+
+
+----------------------
+
+
+@charset "utf-8";
+/* PetDetail */
+
+.PetDetailBorder{
+    border-bottom: 1px solid #ebebeb;
+}
+.PetDetailIn>div {
+    width: calc(100% - 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.PetDetailIn .type{
+    flex-direction: row;
+}
+.type p:first-child::after{
+    content: '|';
+    margin: 0 15px;
+}
+.PetDetailIn .age {
+    flex-direction: row;
+}
+.age p {
+    margin-right: 4px;
+}
+.age p:nth-child(2) {
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.illness span{
+    font-weight: bold;
+}
+.PetDetailEdit{
+    display: flex;
+    justify-content: right;
+    margin: 10px 0;
+}
+.PetDetailEdit div{
+    margin-left: 10px;
+}
+.calendarTitle{
+    text-align: center;
+    margin: 10px 0;
+}
+.react-calendar{
+    margin: 0 auto 20px;
+}
+.CalDate{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+---------------
+
+@charset "utf-8";
+/* PetRecord */
+
+fieldset{
+    border: 0;
+    margin-top: 5px;
+}
+legend{
+    display: flex;
+    align-items: center;
+}
+legend p{
+    margin-right: 25px;
+}
+label{
+    display: flex;
+    width: 100px;
+    margin-left: 5px;
+}
+label input{
+    margin-right: 5px;
+}
+.active legend p{
+    margin-right: 10px;
+}
+.misc{
+    display: flex;
+    margin: 10px 0;
+}
+.misc p{
+    margin-right: 30px;
+}
+.misc input{
+    width: 300px;
+    height: 150px;
+    margin-top: 4px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+}
+.btnSave{
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 auto;
+    width: 333px;
+    border-radius: 30px;
+    background-color: #ff5a5c;
+}
+.btnSave button{
+    font-size: 16px;
+    color: white;
+}

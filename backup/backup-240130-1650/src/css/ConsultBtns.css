@@ -1,0 +1,14 @@
+.ConsultBtns{
+    position: fixed;
+    bottom: 85px;
+    left: 0;
+    width: 100%;
+}
+.ConsultBtns .cateBtn{
+    width: 33.33%;
+    height: 70px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    color: #666;
+    background-color: #d9d9d9;
+}

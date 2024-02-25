@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* Reservation.css */
+
+
+.ReserWrap{
+    padding: 50px 20px 0 20px;
+
+}
+.ReserHead .btn div{
+    display: flex;
+    color: #333;
+}
+.ReserHead .btn .material-icons-outlined{
+    font-size: 20px;
+}
+.ReserHead .btn h2{
+    margin: -3px 0 0 3px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ReserAnimal{
+    margin-top: 20px;
+    display: flex;
+}
+.ReserAnimal div{
+    margin-right: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.ani_photo{
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.ani_photo img{
+    width: 100%;
+}
+.ReserHospital{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ReserTime div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.ReserTime p{
+    margin: 0 5px 10px 5px;
+    background-color: #ebebeb;
+    padding: 5px;
+    border-radius: 5px;
+}
+.ReserTime .btn.active{
+     background-color: lightblue;
+}

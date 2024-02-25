@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* PetDetail */
+
+.PetDetailBorder{
+    border-bottom: 1px solid #ebebeb;
+}
+.PetDetailIn>div {
+    width: calc(100% - 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.PetDetailIn .type{
+    flex-direction: row;
+}
+.type p:first-child::after{
+    content: '|';
+    margin: 0 15px;
+}
+.PetDetailIn .age {
+    flex-direction: row;
+}
+.age p {
+    margin-right: 4px;
+}
+.age p:nth-child(2) {
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.illness span{
+    font-weight: bold;
+}
+.PetDetailEdit{
+    display: flex;
+    justify-content: right;
+    margin: 10px 0;
+}
+.PetDetailEdit div{
+    margin-left: 10px;
+}
+.calendarTitle{
+    text-align: center;
+    margin: 10px 0;
+}
+.react-calendar{
+    margin: 0 auto 20px;
+}
+.CalDate{
+    text-align: center;
+    margin-bottom: 20px;
+}
