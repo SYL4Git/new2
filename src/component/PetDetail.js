@@ -44,6 +44,7 @@ const PetDetail = ({
 		if (pet_symptoms) {
 			handleCalendar(value);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [value, pet_symptoms]);
 
 	const handleDelete = (id) => {
