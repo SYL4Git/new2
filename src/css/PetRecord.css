@@ -1,59 +1,71 @@
 @charset "utf-8";
 /* PetRecord */
 
-.PetRecord fieldset{
+.PetRecord fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 0;
     border-bottom: 1px solid #ebebeb;
 }
-.PetRecord legend{
+
+.PetRecord legend {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 10px 20px;
     box-sizing: border-box;
 }
-.PetRecord legend p{
+
+.PetRecord legend p {
     width: 19%;
     font-weight: 600;
 }
-.PetRecord label{
+
+.PetRecord label {
     display: flex;
     width: 27%;
 }
-.PetRecord label input{
+
+.PetRecord label input {
     margin-right: 5px;
+    -webkit-appearance: none;
 }
+
 [type="radio"] {
     accent-color: #ff5a5c;
-  }
-.PetRecord .misc{
+}
+
+.PetRecord .misc {
     display: flex;
     width: 100%;
     padding: 10px 20px;
     box-sizing: border-box;
 }
-.PetRecord .misc p{
+
+.PetRecord .misc p {
     width: 19%;
     font-weight: 600;
 }
-.PetRecord .misc input{
+
+.PetRecord .misc input {
     width: 81%;
     height: 150px;
     border: 1px solid #ebebeb;
     border-radius: 10px;
 }
-.PetRecord .misc input:focus{
+
+.PetRecord .misc input:focus {
     outline: none;
 }
-.PetRecord .btnSave{
+
+.PetRecord .btnSave {
     text-align: center;
     padding: 10px 20px;
     box-sizing: border-box;
 }
-.PetRecord .btnSave button{
+
+.PetRecord .btnSave button {
     width: 100%;
     border-radius: 30px;
     background-color: #ff5a5c;
